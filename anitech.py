@@ -69,8 +69,9 @@ def create_project(conn, project):
 
 
 def main():
-	database = "/home/pi/anitech_prototype/database.db"
-	humi, temp = Adafruit_DHT.read_retry(DHT_SENSOR, DHT_PIN)
+	#database = "/home/pi/anitech_prototype/database.db"
+    database = conn_string
+    humi, temp = Adafruit_DHT.read_retry(DHT_SENSOR, DHT_PIN)
 	date = datetime.today().strftime('%Y-%m-%d %H:%M')
 	mylcd = I2C_LCD_driver.lcd()
 
